@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Cash extends Model
 {
     use HasFactory;
-
+    
     protected $fillable = [
         'name',
         'slug',
@@ -16,4 +16,6 @@ class Cash extends Model
         'amount',
         'description',
     ];
+
+    protected $dates = ['when'];
 }

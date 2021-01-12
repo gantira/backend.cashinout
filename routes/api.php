@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Auth::loginUsingId(1);
+Auth::loginUsingId(2);
 
 Route::middleware('auth:sanctum')->group(function () {
 
