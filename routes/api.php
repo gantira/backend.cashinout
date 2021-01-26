@@ -16,8 +16,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Auth::loginUsingId(2);
-
 Route::middleware('auth:sanctum')->group(function () {
 
     Route::get('me', [MeController::class, '__invoke']);
@@ -25,5 +23,6 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::prefix('cash')->group(function () {
         Route::get('', [CashController::class, 'index']);
         Route::post('create', [CashController::class, 'store']);
+        Route::get('{cash:slug}', [CashController::class, 'show']);
     });
 });
